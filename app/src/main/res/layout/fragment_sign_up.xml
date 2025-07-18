@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Buat Akun"
+        />
+
+    <!-- Nama -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingVertical="5dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:text="Nama"
+            />
+
+        <LinearLayout
+            android:layout_width="358dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/borderbox_normal"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/symbolpersongrey"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <EditText
+                android:id="@+id/userSignUpName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColor="#F0F0EF"
+                android:textSize="15dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="0dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Alamat Email -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingVertical="5dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:text="Alamat Email"
+            />
+
+        <LinearLayout
+            android:layout_width="358dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/borderbox_normal"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="16dp"
+                android:background="@drawable/symbolemail"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <EditText
+                android:id="@+id/userSignUpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textColor="#F0F0EF"
+                android:textSize="15dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="0dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Kata Sandi -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingVertical="5dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:text="Kata Sandi"
+            />
+
+        <LinearLayout
+            android:layout_width="358dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/borderbox_normal"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="18.5dp"
+                android:layout_height="19.5dp"
+                android:background="@drawable/symbolpassword"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <EditText
+                android:id="@+id/userSignUpPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:textColor="#F0F0EF"
+                android:textSize="15dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="0dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Sandi Confirmation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingVertical="5dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:text="Konfirmasi Kata Sandi"
+            />
+
+        <LinearLayout
+            android:layout_width="358dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/borderbox_normal"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="18.5dp"
+                android:layout_height="19.5dp"
+                android:background="@drawable/symbolpassword"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <EditText
+                android:id="@+id/userSignUpPasswordConfirmation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:textColor="#F0F0EF"
+                android:textSize="15dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="0dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonSignUp"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/borderbox_purple"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/symbolsigninup"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="2dp"
+            android:textStyle="bold"
+            android:text="Daftar"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/goToSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="#636AE8"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="Sudah punya akun? Masuk di sini"
+        />
+
+
+
+</LinearLayout>

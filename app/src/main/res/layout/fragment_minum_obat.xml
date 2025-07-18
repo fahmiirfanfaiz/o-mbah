@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include layout="@layout/header_layout"/>
+    
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="527dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginVertical="30dp"
+        android:background="@drawable/borderbox_normal"
+        >
+        
+        <ImageView
+            android:id="@+id/imageMinumObat"
+            android:layout_width="324dp"
+            android:layout_height="324dp"
+            android:background="@drawable/borderbox_grey"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/textJudulObat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:gravity="center_horizontal"
+            android:text="MinumObatText"
+            android:layout_marginTop="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textDosisObat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#ACADAC"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:text="1 tablet"
+                />
+
+            <TextView
+                android:id="@+id/textKeteranganObat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#ACADAC"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                android:text="Setelah makan"
+                />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="5dp"
+            >
+            
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/symboltime"
+                android:layout_gravity="center"
+                android:layout_marginTop="1.5dp"
+                />
+
+            <TextView
+                android:id="@+id/textWaktuObat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#636AE8"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:text="08:00"
+                android:layout_marginStart="10dp"
+                />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            >
+            
+            <LinearLayout
+                android:id="@+id/buttonSkipObat"
+                android:layout_width="154dp"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/borderbox_normal"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="Skip"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonSudahMinum"
+                android:layout_width="154dp"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/borderbox_purple"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginLeft="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="Sudah"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/footerLayout"
+        layout="@layout/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</LinearLayout>

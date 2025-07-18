@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/headerLayout"
+                layout="@layout/header_layout"
+                />
+
+            <LinearLayout
+                android:layout_width="364dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="30dp"
+                android:background="@drawable/borderbox_normal"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/borderbox_purple"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="106.13dp"
+                        android:background="@drawable/ombahwhitelogo"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="10dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="130dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:text="O-MBAH"
+                            android:layout_marginBottom="15dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/borderbox_normal"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="20dp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:text="Obat, Mbah?"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="30dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/buttonMinumObat"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/symbolobat"
+                            android:clickable="true"
+                            android:focusable="true"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:text="Minum\nObat"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="30dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/buttonTambahObat"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/symboladdobat"
+                            android:clickable="true"
+                            android:focusable="true"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:text="Tambah\nObat"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:text="Obat yang sedang dikonsumsi"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerKonsumsiObat"
+                android:layout_width="364dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="5dp"
+                />
+
+            <include
+                android:id="@+id/footerLayout"
+                layout="@layout/footer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
