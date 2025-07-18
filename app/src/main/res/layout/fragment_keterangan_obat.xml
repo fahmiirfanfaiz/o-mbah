@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="0dp">
@@ -17,6 +16,54 @@
             android:layout_height="wrap_content">
 
             <include layout="@layout/header_layout"/>
+
+            <LinearLayout
+                android:layout_marginVertical="20dp"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/borderbox_normal"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/circleStatus"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/circle_purple"
+                    android:layout_marginHorizontal="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:text="Status"
+                        />
+
+                    <TextView
+                        android:id="@+id/textStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#ACADAC"
+                        android:textSize="18sp"
+                        android:text="Status"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
 
             <!-- Detail Obat -->
             <LinearLayout
@@ -49,8 +96,8 @@
                     android:text="Nama Obat"
                     />
 
-                <EditText
-                    android:id="@+id/inputNamaObat"
+                <TextView
+                    android:id="@+id/namaObat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="15dp"
@@ -69,8 +116,8 @@
                     android:text="Dosis Obat"
                     />
 
-                <EditText
-                    android:id="@+id/inputDosisObat"
+                <TextView
+                    android:id="@+id/dosisObat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="15dp"
@@ -89,31 +136,14 @@
                     android:text="Foto Obat"
                     />
 
-                <LinearLayout
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="367dp"
                     android:orientation="vertical"
                     android:background="@drawable/borderbox_grey"
-                    android:gravity="center"
-                    android:layout_marginBottom="15dp">
+                    android:layout_marginBottom="15dp"
+                    />
 
-                    <ImageView
-                        android:src="@drawable/symboladdphoto"
-                        android:layout_width="60dp"
-                        android:layout_height="50dp"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tambah Foto"
-                        android:textColor="#ACADAC"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="8dp" />
-
-                </LinearLayout>
             </LinearLayout>
 
             <!-- Instruksi dan Jadwal -->
@@ -147,8 +177,8 @@
                     android:text="Dosis Sekali Minum"
                     />
 
-                <EditText
-                    android:id="@+id/inputDosisMinum"
+                <TextView
+                    android:id="@+id/dosisMinum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="15dp"
@@ -167,12 +197,14 @@
                     android:text="Frekuensi"
                     />
 
-                <Spinner
-                    android:id="@+id/dropdownFrekuensi"
+                <TextView
+                    android:id="@+id/frekuensiMinum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/borderbox_normal"
+                    android:paddingHorizontal="20dp"
+                    android:text="Harian"
                     />
 
                 <!-- Tambah Waktu Button -->
@@ -189,25 +221,16 @@
                     />
 
                 <LinearLayout
-                    android:id="@+id/buttonTambahWaktu"
-                    android:layout_width="154dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="42dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:background="@drawable/borderbox_grey"
-                    android:clickable="true"
-                    android:focusable="true"
                     android:layout_marginLeft="10dp"
                     >
 
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:background="@drawable/symbolplus"
-                        android:layout_marginRight="5dp"
-                        />
-
                     <TextView
+                        android:id="@+id/waktuMinum"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:textStyle="bold"
@@ -215,7 +238,8 @@
                         android:textSize="14sp"
                         android:layout_gravity="center"
                         android:paddingTop="3dp"
-                        android:text="Tambah Waktu"
+                        android:paddingHorizontal="15dp"
+                        android:text="08:00"
                         />
 
                 </LinearLayout>
@@ -246,7 +270,7 @@
                         android:text="Harus habis "
                         />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/inputKaliKonsumsi"
                         android:layout_width="44dp"
                         android:layout_height="35dp"
@@ -286,7 +310,7 @@
 
             <!-- Buttons -->
             <LinearLayout
-                android:id="@+id/buttonSimpan"
+                android:id="@+id/buttonEdit"
                 android:layout_width="358dp"
                 android:layout_height="42dp"
                 android:layout_gravity="center"
@@ -305,7 +329,32 @@
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:layout_gravity="center"
-                    android:text="Simpan"
+                    android:text="Edit"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonHapus"
+                android:layout_width="358dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/borderbox_red"
+                android:clickable="true"
+                android:focusable="true"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="Hapus"
                     />
 
             </LinearLayout>
@@ -320,7 +369,7 @@
                 android:background="@drawable/borderbox_normal"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_marginBottom="80dp"
+                android:layout_marginBottom="90dp"
                 >
 
                 <TextView
